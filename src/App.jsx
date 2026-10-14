@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import DashboardPage from "./pages/dashboard/DashboardPage";
-import Layout from "./layouts/MainLayout";
-import ProdukPage from "./pages/Produk/ProdukPage";
+import Layout from "./layouts/main/MainLayout";
+import ProductPage from "./pages/product/ProductPage";
+
 
 const App = () => {
   return (
@@ -9,11 +10,11 @@ const App = () => {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<DashboardPage />} />
-          <Route path="produk" element={<ProdukPage />} />
-          <Route path="customers"></Route>
-          <Route path="promote"></Route>
+          <Route path="product" element={<ProductPage />} />
+          <Route path="dataAsset"></Route>
+          <Route path="borrowing"></Route>
+          <Route path="maintenance"></Route>
           <Route path="help"></Route>
-          <Route path="inventaris"></Route>
         </Route>
       </Routes>
     </BrowserRouter>
